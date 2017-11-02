@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="da">
+	<head>
+		<title>EMDR for browsers</title>
+		<link rel="stylesheet" type="text/css" href="./assets/css/default.css" />
+		<script type="text/javascript" src="./assets/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="./assets/js/Tone.min.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="outer-container">
+				<div id="dot">
+				</div>
+				<div class="clearfix"></div>
+				<div id="controls">
+					<form>
+						<label>Pause: <span id="counter">800</span>ms</label>
+						<input type="range" min="400" max="1500" step="50" value="800" id="tempo">
+						<input type="button" value="Start" id="go-btn">
+						<input type="button" value="Stop" id="stop-btn">
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$("#dot").addClass("to-left");
+			var panleft = new Tone.Panner(-1);
+			var panright = new Tone.Panner(1);
+			var stereo = new Tone.Oscillator(440, "sine");
+			var tempo = $("#tempo");
+			var counter = $("#counter");
+			tempo.change(function(){
+				counter.text($(this).val());
+			});
+			$("#go-btn").click(function(){
+
+				var emdr = setInterval(function(tempo){
+					stereo.disconnect();
+					if ($("#dot").hasClass("to-left") == true) {
+						stereo.chain(panleft, Tone.Master).start().stop("+16n");
+						console.log("Left");
+					} else {
+						stereo.chain(panright, Tone.Master).start().stop("+16n");
+						console.log("Right");
+					};
+					$("#dot").toggleClass("to-left");
+					$("#dot").toggleClass("to-right");
+				},tempo.val());
+				$("#stop-btn").click(function(){
+					clearInterval(emdr);
+				});
+			});
+		});
+		</script>
+	</body>
+</html>
