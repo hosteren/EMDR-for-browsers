@@ -1,4 +1,6 @@
 # EMDR-for-browsers
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FBkoos%2FEMDR-for-browsers.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FBkoos%2FEMDR-for-browsers?ref=badge_shield)
+
 > Eye Movement Desensitization and Reprocessing is a newer form of therapy for PTSD as well as anxiety. 
 
 This html file shows a blinking black dot and has alternating beeps, and is configurable through a slider.
@@ -12,3 +14,6 @@ The way this form of therapy is supposed to work is by concentrating on a painfu
 The effect on PTSD when done right can be substantiel. Ten minutes doing this, with a couple of pauses and I was free of associating some good music to a relationship I had with a satan like entity.
 
 I would love to hear some thoughts on its effectiveness.
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FBkoos%2FEMDR-for-browsers.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FBkoos%2FEMDR-for-browsers?ref=badge_large)
