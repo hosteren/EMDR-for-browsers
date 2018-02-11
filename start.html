@@ -3,7 +3,7 @@
 	<head>
 		<title>EMDR for browsers</title>
 		<link rel="stylesheet" type="text/css" href="./assets/css/default.css" />
-		<script type="text/javascript" src="./assets/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="./assets/js/jquery-3.3.1.min.js"></script>
 		<script type="text/javascript" src="./assets/js/Tone.min.js"></script>
 	</head>
 	<body>
@@ -26,7 +26,7 @@
 			$("#dot").addClass("to-left");
 			var panleft = new Tone.Panner(-1);
 			var panright = new Tone.Panner(1);
-			var stereo = new Tone.Oscillator(440, "sine");
+			var stereo = new Tone.Oscillator(392, "sine");
 			var tempo = $("#tempo");
 			var counter = $("#counter");
 			tempo.change(function(){
