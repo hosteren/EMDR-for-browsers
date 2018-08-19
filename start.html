@@ -24,9 +24,10 @@
 		<script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$("#dot").addClass("to-left");
+			var vol = new Tone.Volume(-9);
 			var panleft = new Tone.Panner(-1);
 			var panright = new Tone.Panner(1);
-			var stereo = new Tone.Oscillator(392, "sine");
+			var stereo = new Tone.Oscillator("C2", "sine");
 			var tempo = $("#tempo");
 			var counter = $("#counter");
 			tempo.change(function(){
@@ -37,10 +38,10 @@
 				var emdr = setInterval(function(tempo){
 					stereo.disconnect();
 					if ($("#dot").hasClass("to-left") == true) {
-						stereo.chain(panleft, Tone.Master).start().stop("+16n");
+						stereo.chain(panleft, vol, Tone.Master).start().stop("+32n");
 						console.log("Left");
 					} else {
-						stereo.chain(panright, Tone.Master).start().stop("+16n");
+						stereo.chain(panright, vol, Tone.Master).start().stop("+32n");
 						console.log("Right");
 					};
 					$("#dot").toggleClass("to-left");
