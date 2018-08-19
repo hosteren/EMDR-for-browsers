@@ -3,7 +3,7 @@
 
 This html file shows a blinking black dot and has alternating beeps, and is configurable through a slider.
 
-You can download the the zip here, unpack it in a folder, and click the **"start.html"** to open it in your default browser.
+You can download the the zip here, unpack it in a folder, and click the [**start.html**](https://bkoos.github.io/EMDR-for-browsers/start.html) to open it in your default browser.
 
 ## How to use
 The way this form of therapy is supposed to work is by concentrating on a painful memory while looking at the square. With your arms across your torso in a manner where you are able to tap your opposite shoulder, you tap each shoulder corresponding to the beeps.
