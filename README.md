@@ -3,7 +3,7 @@ EMDR-for-browsers
 
 > Eye Movement Desensitization and Reprocessing (EMDR) is a form of therapy that has been shown to be effective in treating PTSD and anxiety.
 
-This HTML file provides a simple and accessible way to practice EMDR at home. It features a blinking black dot and alternating beeps that can be customized using a slider.
+This HTML file provides a simple and accessible way to practice EMDR at home. It features a blinking black dot and alternating beeps that can be customized using a slider. [**Try it here**](https://hosteren.github.io/EMDR-for-browsers/start.html "Try EMDR here!")!
 
 **How to use**
 --------------
