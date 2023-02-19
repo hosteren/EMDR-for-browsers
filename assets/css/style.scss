@@ -1,0 +1,75 @@
+@import "../../libraries/bulma/bulma.sass";
+@import "../../libraries/bulma-slider/src/sass/index.sass";
+@import "../../libraries/bulma-switch/src/sass/index.sass";
+
+body {
+    background-color: $light;
+    height: 100vh;
+    transition: all 0.2s ease;
+}
+
+body .text {
+    color: $dark;
+}
+
+body.dark {
+    background-color: $dark;
+    color: $light;
+}
+
+body.dark .text {
+    color: $light;
+}
+
+.section {
+    display: flex;
+    //align-items: center;
+    //justify-content: center;
+    height: 70vh;
+    padding: 17% 2% 0% 2%;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    color: $light;
+    padding: .7rem;
+    background: $dark;
+    border-radius: 6px;
+}
+
+body.dark button {
+    background: $light;
+    color: $dark;
+}
+
+#dot {
+    border-radius: 50px;
+	background-color: $dark;
+	height: 100px;
+	width: 100px;
+}
+
+body.dark #dot {
+	background-color: $light;
+}
+
+#tick-output, #volume-output {
+    background-color: $dark;
+    color: $light;
+    padding: .7rem;
+    height: min-content;
+    width: 69px;
+    text-align: center;
+}
+
+body.dark #tick-output, body.dark #volume-output {
+    background-color: $light;
+    color: $dark;
+}
+
+.label {
+    //justify-content: center;
+    width: 95px;
+}
+
