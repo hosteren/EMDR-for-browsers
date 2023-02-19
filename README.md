@@ -1,27 +1,25 @@
-# EMDR-for-browsers
+EMDR-for-browsers
+=================
 
-> Eye Movement Desensitization and Reprocessing is a form of therapy for PTSD and anxiety.
+> Eye Movement Desensitization and Reprocessing (EMDR) is a form of therapy that has been shown to be effective in treating PTSD and anxiety.
 
-This html file shows a blinking black dot and has alternating beeps, and is configurable through a slider.
+This HTML file provides a simple and accessible way to practice EMDR at home. It features a blinking black dot and alternating beeps that can be customized using a slider.
 
-You can download the the zip here, unpack it in a folder, and click the [**start.html**](https://hosteren.github.io/EMDR-for-browsers/start.html) to open it in your default browser.
+**How to use**
+--------------
 
-## **How to use**
+To use this tool, follow these steps:
 
-The way this form of therapy is supposed to work is by concentrating on a painful memory while following the square from side to side. Then, with your arms across your torso, in a manner where you are able to tap your opposite shoulder, tap each shoulder corresponding to the beeps. Or whatever works for you.
+1.  Concentrate on a painful memory while following the black dot as it moves from side to side.
+2.  With your arms across your torso, tap each shoulder corresponding to the beeps.
+3.  Repeat this process for the desired length of time.
 
-## **The effect**
+**The effect**
+--------------
 
-The effect on PTSD when done right can be substantiel. Ten minutes doing this, with a couple of pauses and I was free of associating some good music to a relationship I had with a satan like entity.
+When done correctly, EMDR can be an effective way to process traumatic memories and reduce anxiety. After just 5 minutes of using this tool, you may find that your symptoms are reduced.
 
-## **Disclaimer**
+**Disclaimer**
+--------------
 
-I just want to make the world a better place. Be careful and be the best you.
-
-### **Donations are very welcome and much appreciated**
-
-BTC: bc1q458hvhdtgx5dv248c5vuya8dj2thqt3df2x52r
-
-ETH: 0x8690216d4D2B0833390D06f59Cf9293b37eFE132
-
-DOGE: D9t4wo31RNyXPGNAXABQ77A7zJbBmrDP4G
+This tool is not a substitute for professional therapy. If you are experiencing symptoms of PTSD or anxiety, please seek help from a qualified mental health professional. Always use caution and do what works best for you.
