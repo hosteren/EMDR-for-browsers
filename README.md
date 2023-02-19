@@ -23,7 +23,3 @@ When done correctly, EMDR can be an effective way to process traumatic memories 
 --------------
 
 This tool is not a substitute for professional therapy. If you are experiencing symptoms of PTSD or anxiety, please seek help from a qualified mental health professional. Always use caution and do what works best for you.
-
-### **Donations**
-
-If you find this tool helpful, please consider making a donation to support its development and maintenance. Your support will help ensure that this tool remains freely available to anyone who needs it. Thank you for your generosity!
