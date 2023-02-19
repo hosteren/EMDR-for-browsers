@@ -79,10 +79,12 @@ function resetEmdr() {
 
 tick_slider.addEventListener('change', function() {
 	localStorage.setItem('tick', tick_slider.value);
+	tick_output.innerText = tick_slider.value;
 });
 
 volume_slider.addEventListener('change', function() {
 	localStorage.setItem('volume', volume_slider.value);
+	volume_output.innerText = volume_slider.value;
 });
 
 start_button.addEventListener('click', () => {
