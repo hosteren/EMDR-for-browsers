@@ -10,34 +10,26 @@ const stop_button = document.getElementById('stop-btn');
 
 let emdr;
 
-// Retrieve tempo from local storage
-let local_tick = parseInt(localStorage.getItem('tick'));
-let local_dark_mode = JSON.parse(localStorage.getItem('dark_mode'));
-let local_volume = parseInt(localStorage.getItem('volume'));
-
+// If initial values aren't present in localStorage, they will be. They will be..
 function first_run() {
-	if (isNaN(local_tick)) {
-		local_tick = 800;
+	if (isNaN(parseInt(localStorage.getItem('tick')))) {
+		localStorage.setItem('tick', 800);
 	}
-	if (isNaN(local_dark_mode)) {
-		local_dark_mode = false;
+	if (isNaN(JSON.parse(localStorage.getItem('dark_mode')))) {
+		localStorage.setItem('dark_mode', JSON.stringify(false));
+
 	}
-	if (isNaN(local_volume)) {
-		local_volume = -6;
+	if (isNaN(parseInt(localStorage.getItem('volume')))) {
+		localStorage.setItem('volume', -6);
 	}
 
-	tick_slider.value = local_tick;
-	tick_output.innerText = local_tick;
+	tick_slider.value = parseInt(localStorage.getItem('tick'));
+	tick_output.innerText = parseInt(localStorage.getItem('tick'));
 	
-	volume_slider.value = local_volume;
-	volume_output.innerText = local_volume;
+	volume_slider.value = parseInt(localStorage.getItem('volume'));
+	volume_output.innerText = parseInt(localStorage.getItem('volume'));
 
-	dark_toggle.checked = local_dark_mode;
-}
-
-
-function check_dark_mode_checkbox() {
-	return dark_toggle.checked;
+	dark_toggle.checked = JSON.parse(localStorage.getItem('dark_mode'));
 }
 
 function check_dark_mode() {
@@ -45,10 +37,10 @@ function check_dark_mode() {
 }
 
 function toggle_dark_mode() {
-	if (check_dark_mode_checkbox() == true) {
+	if (dark_toggle.checked == false) {
 		body.classList.remove('dark');
 	}
-	if (check_dark_mode_checkbox() == false){
+	if (dark_toggle.checked == true){
 		body.classList.add('dark');
 	}
 	
@@ -76,6 +68,8 @@ function resetEmdr() {
 	dot.classList.add('is-pulled-right');
 }
 
+first_run();
+toggle_dark_mode();
 
 tick_slider.addEventListener('change', function() {
 	localStorage.setItem('tick', tick_slider.value);
@@ -96,12 +90,8 @@ stop_button.addEventListener('click', stopEmdr);
 
 
 dark_toggle.addEventListener('click', () => {
-	const checked = JSON.stringify(check_dark_mode_checkbox());
-	localStorage.setItem('dark_mode', checked);
+	localStorage.setItem('dark_mode', JSON.stringify(dark_toggle.checked));
 	toggle_dark_mode();
 });
-
-first_run();
-toggle_dark_mode();
 
 bulmaSlider.attach();
