@@ -1,0 +1,32 @@
+{
+  "sourceMaps": false,
+  "ignore": [
+    "node_modules/**"
+  ],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "targets": {
+          "browsers": [
+            ">0.25%",
+            "ie 11"
+          ]
+        }
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "env"
+        ]
+      ]
+    }
+  },
+  "plugins": [
+    "@babel/plugin-proposal-object-rest-spread"
+  ]
+}

@@ -1,6 +1,5 @@
-@import "../../libraries/bulma/bulma.sass";
-@import "../../libraries/bulma-slider/src/sass/index.sass";
-@import "../../libraries/bulma-switch/src/sass/index.sass";
+@import "../libraries/bulma/bulma.sass";
+
 
 body {
     background-color: $light;
@@ -21,12 +20,12 @@ body.dark .text {
     color: $light;
 }
 
+#settings-container {
+    position: fixed;
+}
+
 .section {
-    display: flex;
-    //align-items: center;
-    //justify-content: center;
-    height: 50vh;
-    padding: 8% 2%;
+    padding-top: 40vh;
 }
 
 button {
@@ -36,6 +35,14 @@ button {
     padding: .7rem;
     background: $dark;
     border-radius: 6px;
+}
+
+#settings-btn {
+    //float: left;
+    //top: 0;
+    //right: 0;
+    //margin: 1rem;
+    width: 130px;
 }
 
 body.dark button {
@@ -54,7 +61,7 @@ body.dark #dot {
 	background-color: $light;
 }
 
-#tick-output, #volume-output {
+#tick-output, #volume-output, #duration-output {
     background-color: $dark;
     color: $light;
     padding: .7rem;
@@ -63,13 +70,13 @@ body.dark #dot {
     text-align: center;
 }
 
-body.dark #tick-output, body.dark #volume-output {
+body.dark #tick-output, body.dark #volume-output, body.dark #duration-output {
     background-color: $light;
     color: $dark;
 }
 
 .label {
     //justify-content: center;
-    width: 95px;
+    width: 105px;
 }
 

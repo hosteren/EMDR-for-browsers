@@ -4,33 +4,44 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>EMDR for browsers</title>
 		<link rel="stylesheet" type="text/css" href="./assets/css/default.min.css" />
+		<link rel="stylesheet" type="text/css" href="./assets/libraries/bulma-slider/dist/css/bulma-slider.min.css" />
+		<link rel="stylesheet" type="text/css" href="./assets/libraries/bulma-switch/dist/css/bulma-switch.min.css" />
 	</head>
 	<body class="">
+		<div class="field is-pulled-right mt-3 mr-3">
+			<button id='settings-btn' class="is-size-6">
+				Hide Settings
+			</button>
+		</div>
 		<div class="container">
-			
-			<div class="columns py-5 mx-2">
-				<div class="column is-5">
-					<div class="field is-flex">
+			<div class="columns py-5 mx-2 is-centered is-flex" id="settings-container">
+				<div class="column is-10 is-flex px-5" id="settings-sliders">
+					<div class="field">
+						<label for="duration" class="label text mt-3">Duration (s):</label>
+						<input type="range" min="0" max="600" step="10" value="60" id="duration" class="slider has-output mb-5 ml-3">
+						<output for="duration" id="duration-output" class="is-size-6 my-2">60</output>
+					</div>
+					<div class="field">
 						<label for="tick" class="label text mt-3" >Tick (ms):</label>
 						<input type="range" min="200" max="1500" step="50" id="tick" class="slider has-output mb-5 ml-3">
 						<output for="tick" id="tick-output" class="is-size-6 my-2"></output>
 					</div>
-				</div>
-				<div class="column is-5">
-					<div class="field is-flex">
+					<div class="field">
 						<label for="volume" class="label text mt-3 mr-3">Volume:</label>
 						<input type="range" min="-21" max="3" step="1" value="-6" id="volume" class="slider has-output mb-5">
 						<output for="volume" id="volume-output" class="is-size-6 my-2">-6</output>
 					</div>
+				</div>
+				<div class="column is-5">
 					<div class="field is-pulled-right">
 						<input id="dark-toggle" type="checkbox" name="dark-toggle" class="switch is-medium is-dark" checked="">
 						<label for="dark-toggle" class="is-size-6 mt-2 ml-4">Dark Mode</label>
 					</div>
 					<div class="field">
-						<button id='stop-btn' class="is-size-6 is-responsive py-2 px-4 m-2 is-pulled-right">
+						<button id='stop-btn' class="is-size-6 py-2 px-4 m-2 is-pulled-right">
 							Stop
 						</button>
-						<button id='start-btn' class="is-size-6 is-responsive py-2 px-4 m-2 is-pulled-right">
+						<button id='start-btn' class="is-size-6 py-2 px-4 m-2 is-pulled-right">
 							Start
 						</button>
 					</div>
@@ -45,7 +56,7 @@
 		</div>
 		<!-- Load JS libraries -->
 		<script type="text/javascript" src="./assets/js/Tone.js"></script>
-		<script type="text/javascript" src="./assets/js/bulma-slider.min.js"></script>
+		<script type="text/javascript" src="./assets/libraries/bulma-slider/dist/js/bulma-slider.min.js"></script>
 		<script type="text/javascript" src="./assets/js/emdr.js"></script>
 	</body>
 </html>
