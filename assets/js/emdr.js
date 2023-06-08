@@ -9,8 +9,8 @@ const volume_slider = document.getElementById('volume');
 const volume_output = document.getElementById('volume-output');
 const start_button = document.getElementById('start-btn');
 const stop_button = document.getElementById('stop-btn');
-const settings_container = document.getElementById('settings-container');
-const settings_sliders = document.getElementById('settings-sliders');
+const action_container = document.getElementById('action-container');
+const sliders = document.getElementById('sliders');
 const settings_button = document.getElementById('settings-btn');
 
 let emdr;
@@ -48,10 +48,10 @@ function first_run() {
 
 function toggle_settings() {
 	if (localStorage.getItem('hide_settings') == "0") {
-		settings_sliders.classList.remove('is-invisible');
+		sliders.classList.remove('is-invisible');
 		settings_button.innerText = "Hide Settings";
 	} else {
-		settings_sliders.classList.add('is-invisible');
+		sliders.classList.add('is-invisible');
 		settings_button.innerText = "Show Settings";
 	}
 }

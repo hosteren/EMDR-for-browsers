@@ -20,12 +20,23 @@ body.dark .text {
     color: $light;
 }
 
-#settings-container {
+#sliders {
     position: fixed;
+    width: fit-content;
+}
+
+#action-container {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
 .section {
-    padding-top: 40vh;
+    padding-top: 25vh;
 }
 
 button {
@@ -37,13 +48,6 @@ button {
     border-radius: 6px;
 }
 
-#settings-btn {
-    //float: left;
-    //top: 0;
-    //right: 0;
-    //margin: 1rem;
-    width: 130px;
-}
 
 body.dark button {
     background: $light;
